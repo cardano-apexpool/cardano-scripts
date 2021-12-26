@@ -1,0 +1,36 @@
+#!/bin/bash
+
+
+# for testnet
+CARDANO_NET="testnet"
+CARDANO_NET_PREFIX="--testnet-magic 1097911063"
+# for mainnet
+#CARDANO_NET="mainnet"
+#CARDANO_NET_PREFIX="--mainnet"
+#
+KEYS_PATH=./wallet
+ADDRESSES_PATH=./wallet
+FILES_PATH=./files
+POLICY_PATH=./policy
+PROTOCOL_PARAMETERS=${FILES_PATH}/protocol-parameters.json
+export CARDANO_NODE_SOCKET_PATH=~/.local/share/Daedalus/${CARDANO_NET}/cardano-node.socket
+
+if [ ! -d ${KEYS_PATH} ] ; then
+  mkdir -p ${KEYS_PATH}
+fi
+
+if [ ! -d ${ADDRESSES_PATH} ] ; then
+  mkdir -p ${ADDRESSES_PATH}
+fi
+
+if [ ! -d ${FILES_PATH} ] ; then
+  mkdir -p ${FILES_PATH}
+fi
+
+if [ ! -d ${POLICY_PATH} ] ; then
+  mkdir -p ${POLICY_PATH}
+fi
+
+if [ ! -f ${PROTOCOL_PARAMETERS} ] ; then
+  cardano-cli query protocol-parameters --out-file  ${PROTOCOL_PARAMETERS} ${CARDANO_NET_PREFIX}
+fi
