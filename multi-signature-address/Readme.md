@@ -265,7 +265,7 @@ You need to first register the stake. This can br done by running following 3 sc
    
  Once this is done, you now need to delegate the stake. In this example the script address is delegated to Apex pool
  
-    . ./08-deleg.sh
+    . ./deleg-08.sh
     . ./05-sign.sh
     . ./06-submit.sh
     
