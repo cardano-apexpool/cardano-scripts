@@ -253,3 +253,19 @@ Also interrogating the script address will show that the 1000 tADA are no longer
 And this concludes my demo with multi-signature addresses on Cardano.
 
 I also tested the scripts with funds being sent to the script address that includes the stake address (“wallet/script-with-stake.addr”), in case you were wondering. This type of address can be used to delegate the funds at a multi-signature address to a stake pool.
+
+
+Now to delegate this multisig wallet 
+You need to first register the stake. This can br done by running following 3 scripts
+
+   . ./07-deleg.sh
+   . ./05-sign.sh
+   . ./06-submit.sh
+   
+   
+ Once this is done, you now need to delegate the stake. In this example the script address is delegated to Apex pool
+ 
+    . ./deleg-08.sh
+    . ./05-sign.sh
+    . ./06-submit.sh
+    
