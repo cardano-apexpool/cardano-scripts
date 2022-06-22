@@ -256,7 +256,9 @@ I also tested the scripts with funds being sent to the script address that inclu
 
 
 Now to delegate this multisig wallet 
+
 You need to first register the stake. This can br done by running following 3 scripts
+
 
    . ./07-deleg.sh
    . ./05-sign.sh
@@ -266,6 +268,6 @@ You need to first register the stake. This can br done by running following 3 sc
  Once this is done, you now need to delegate the stake. In this example the script address is delegated to Apex pool
  
     . ./deleg-08.sh
-    . ./05-sign.sh
+    . ./07-sign-delegation.sh
     . ./06-submit.sh
     
