@@ -5,7 +5,7 @@
 
 cardano-cli stake-address registration-certificate \
     --stake-verification-key-file wallet/stake.vkey \
-    --out-file stake.cert
+    --out-file wallet/stake.cert
 
 
 currentSlot=$(cardano-cli query tip ${CARDANO_NET_PREFIX} | jq -r '.slot')
