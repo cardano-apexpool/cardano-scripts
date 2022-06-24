@@ -37,7 +37,7 @@ echo Number of UTXOs: ${txcnt}
 cardano-cli transaction build \
 ${tx_in} \
 --change-address $(cat wallet/script.addr) \
---tx-in-script-file ${NODE_HOME}/policy.script \
+--tx-in-script-file ${POLICY_PATH}/policy.script \
 --witness-override 4 \
 --out-file tx.raw \
 --certificate-file deleg.cert  \
