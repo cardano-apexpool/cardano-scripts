@@ -40,7 +40,7 @@ echo stakeAddressDeposit : $stakeAddressDeposit
 cardano-cli transaction build \
 ${tx_in} \
 --change-address $(cat wallet/script.addr) \
---tx-in-script-file ${NODE_HOME}/policy.script \
+--tx-in-script-file ${POLICY_PATH}/policy.script \
 --witness-override 3 \
 --out-file tx.raw \
 --certificate wallet/stake.cert \
