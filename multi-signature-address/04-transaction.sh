@@ -17,4 +17,5 @@ cardano-cli transaction build \
 --tx-in-script-file ${POLICY_PATH}/policy.script \
 --witness-override 3 \
 --out-file tx.raw \
+--babbage-era \
 ${CARDANO_NET_PREFIX}
