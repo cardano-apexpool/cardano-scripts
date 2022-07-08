@@ -12,6 +12,7 @@ ID=$(echo ${TRANS} | awk '{print $2}')
 TXIN=${UTXO}#${ID}
 
 cardano-cli transaction build \
+--babbage-era \
 --tx-in ${TXIN} \
 --change-address ${DSTADDRESS} \
 --tx-in-script-file ${POLICY_PATH}/policy.script \
