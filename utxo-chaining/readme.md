@@ -108,5 +108,5 @@ if __name__ == "__main__":
  ```
  
  
- This is just a simple way to create utxo chaining. Please note that you should have IN connections for the cardano-node as it will have updated mempool or you should submit all transactions in same node
+ This is just a simple way to create utxo chaining. Please note that you should submit all transactions in same node.
  
